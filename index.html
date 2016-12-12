@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="UTF-8">
+	<title>RPS-Multiplayer</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+
+    <!-- Firebase Reference -->
+    <<script src="https://www.gstatic.com/firebasejs/3.6.3/firebase.js"></script>
+
+</head>
+<body>
+	<div class="container">
+
+		<div class="row">
+			<div class="jumbotron">
+ 				<h1 style="text-align: center">Rock Paper Scissors!</h1>
+  			</div> <!-- jumbotron ends -->
+		</div> <!-- row ends -->
+
+		<div class="row" id="loginRow">
+			<div class="col-sm-4" >	
+			</div> <!-- column ends -->
+			<div class="col-sm-4">
+				<div class="input-group" id="console">
+   					<input type="text" class="form-control" id="userName">
+   					<span class="input-group-btn">
+        				<button id="loginButton" class="btn btn-default" type="button">Login!</button>
+   					</span>
+				</div> <!-- input group ends -->
+			</div> <!-- column ends -->
+			<div class="col-sm-4">	
+			</div> <!-- column ends -->
+		</div> <!-- login row ends -->
+		
+		<div class="row" id="contentRow">
+			<div class="col-sm-4">
+				<div id="player1">
+
+					<h2 id="player1Name" style="text-align: center">Waiting</h2>
+
+					<div id="player1Btn" style="text-align: center">
+						<p class="btn rockBtn btn1" data-value="rock">Rock</p><br>
+						<p class="btn paperBtn btn1" data-value="paper">Paper</p><br>
+						<p class="btn scissorBtn btn1" data-value="scissor">Scissors</p><br>
+					</div>
+
+					<p id="winLose1" style="text-align: center">Wins: 0 Losses: 0</p>
+					
+				</div>	<!-- player div 1 ends -->
+			</div> <!-- column ends -->
+			<div class="col-sm-4">
+				<div id="resultsBox">
+					<h2 style="text-align: center">Results</h2>
+					
+					<div>
+						<h1 id="battleStatus"></h1>
+					</div>
+				</div> <!-- results div ends -->
+			</div> <!-- column ends -->
+			<div class="col-sm-4">
+				<div id="player2">
+					<h2 id="player2Name" style="text-align: center">Waiting</h2>
+					
+					<div id="player2Btn" style="text-align: center">
+						<p class="btn rockBtn btn2" data-value="rock">Rock</p><br>
+						<p class="btn paperBtn btn2" data-value="paper">Paper</p><br>
+						<p class="btn scissorBtn btn2" data-value="scissor">Scissors</p><br>
+					</div>
+
+					<p id="winLose2" style="text-align: center">Wins: 0 Losses: 0</p>
+				</div> <!-- player 2 divends -->	
+			</div> <!-- column ends -->
+		</div> <!-- Content Row ends -->
+
+
+		<div class="row" id="chatRow">
+			<div class="col-sm-2" >	
+			</div> <!-- column ends -->
+			<div class="col-sm-8 holder-messages">
+				<div id="messages"></div>
+					<form id="message-form">
+						<input type="text" id="message-input" placeholder="Message">
+						<input id="addMessage" type="submit" value="Send">
+					</form>
+			</div> <!-- column ends -->
+			<div class="col-sm-2">	
+			</div> <!-- column ends -->
+		</div> <!-- chat row ends -->
+
+	</div> <!-- container ends -->
+
+	<!-- Javascript -->
+    <script src="assets/javascript/app.js"></script>
+
+</body>
+</html>
